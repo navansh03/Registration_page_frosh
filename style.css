@@ -1,0 +1,277 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    background-image: url("https://64.media.tumblr.com/4b65302989093126e347c1930a0ea111/tumblr_pvkfnlC9801qeyvpto1_500.gifv");
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #444444;
+
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #0eb21b;
+    transform: scale(1.1);
+}
+
+.glitch {
+    position: relative;
+    display: inline-block;
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 10px #1e5bcc;
+    animation: glitch 1s linear infinite;
+    animation-delay: 2s;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.glitch::before {
+    text-shadow: -2px 0 #f7df1e;
+    clip: rect(44px, 900px, 56px, 0);
+    animation: glitchTop 1s linear infinite;
+}
+
+.glitch::after {
+    text-shadow: 2px 0 #079640;
+    clip: rect(54px, 900px, 66px, 0);
+    animation: glitchBottom 1s linear infinite;
+}
+
+@keyframes glitch {
+
+    2%,
+    64% {
+        transform: translate(2px, 0) skew(0deg);
+    }
+
+    4%,
+    60% {
+        transform: translate(-2px, 0) skew(0deg);
+    }
+
+    62% {
+        transform: translate(0, 0) skew(5deg);
+    }
+}
+
+@keyframes glitchTop {
+
+    2%,
+    64% {
+        clip: rect(42px, 900px, 54px, 0);
+        transform: translate(2px, -2px);
+    }
+
+    4%,
+    60% {
+        clip: rect(22px, 900px, 82px, 0);
+        transform: translate(-2px, 0);
+    }
+
+    62% {
+        clip: rect(38px, 900px, 42px, 0);
+        transform: translate(4px, 0);
+    }
+}
+
+@keyframes glitchBottom {
+
+    2%,
+    64% {
+        clip: rect(66px, 900px, 78px, 0);
+        transform: translate(-2px, 0);
+    }
+
+    4%,
+    60% {
+        clip: rect(10px, 900px, 90px, 0);
+        transform: translate(2px, 2px);
+    }
+
+    62% {
+        clip: rect(70px, 900px, 30px, 0);
+        transform: translate(0, -2px);
+    }
+}
+
+main {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+section {
+    width: 30%;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px #2aa31a;
+    animation: glitchText 1s linear infinite;
+}
+
+@keyframes glitchText {
+
+    2%,
+    64% {
+        text-shadow: -1px -1px #f7df1e, 1px 1px #f7df1e;
+    }
+
+    4%,
+    60% {
+        text-shadow: -1px 1px #f7df1e, 1px -1px #f7df1e;
+    }
+
+    62% {
+        text-shadow: 0 0 10px #f7df1e;
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+input,
+textarea,
+button {
+    font-size: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    background-color: #444444;
+    color: white;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+input:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px #f7df1e;
+}
+
+button:hover {
+    background-color: #f7df1e;
+    color: black;
+    transform: scale(1.1);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0e0404;
+    color: rgb(25, 35, 123);
+    margin-top: 50px;
+}
+.contact-left{
+    flex-basis: 35%;
+
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+
+}
+.contact-left p i{
+    color:#ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+
+}
+.social-icons{
+    margin-top: 30px;
+
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #abaaba;
+    display: inline-block;
+    transition: tranform 0.5s;
+}
+.social-icons a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    background: #ff004f;
+
+}
+.contact-right form{
+    width: 100%;
+    
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0px;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .btn.btn2{
+    padding: 14px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
