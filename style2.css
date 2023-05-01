@@ -4,18 +4,21 @@
 	margin: 0;
 	padding: 0;
 }
+
 body {
 	background-color: #0b0202;
-    background-image: url("https://64.media.tumblr.com/4b65302989093126e347c1930a0ea111/tumblr_pvkfnlC9801qeyvpto1_500.gifv");  
+	background-image: url("https://64.media.tumblr.com/4b65302989093126e347c1930a0ea111/tumblr_pvkfnlC9801qeyvpto1_500.gifv");
 	color: #fff;
 	font-family: sans-serif;
 	font-size: 16px;
 	line-height: 1.5;
 }
+
 a {
-	color: #fff;
+	color: #b05b5b;
 	text-decoration: none;
 }
+
 a:hover {
 	color: rgb(10, 65, 162);
 }
@@ -32,16 +35,7 @@ header {
 	background-size: cover;
 	position: relative;
 }
-header::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: rgba(6, 29, 95, 0.5);
-	z-index: -1;
-}
+
 .glitch {
 	font-size: 5rem;
 	font-weight: bold;
@@ -53,6 +47,7 @@ header::before {
 	position: relative;
 	animation: glitch 1s infinite linear alternate-reverse;
 }
+
 .glitch::before,
 .glitch::after {
 	content: attr(data-text);
@@ -61,112 +56,63 @@ header::before {
 	left: 0;
 	opacity: 0.8;
 }
+
 .glitch::before {
 	left: 2px;
 	text-shadow: -2px 0 #00ff00;
 }
+
 .glitch::after {
 	left: -2px;
 	text-shadow: 2px 0 #0000ff;
 }
+
 @keyframes glitch {
 	0% {
 		transform: translate(0);
 	}
+
 	20% {
 		transform: translate(-5px, 5px);
 	}
+
 	40% {
 		transform: translate(5px, -5px);
 	}
+
 	60% {
 		transform: translate(-5px, 5px);
 	}
+
 	80% {
 		transform: translate(5px, -5px);
 	}
+
 	100% {
 		transform: translate(0);
 	}
 }
+
 nav {
 	margin-top: 50px;
 }
+
 nav ul {
 	display: flex;
 	list-style: none;
 }
+
 nav li {
 	margin-right: 20px;
 }
+
 nav a {
 	font-size: 1.5rem;
 	font-weight: bold;
 }
 
-/* Main styles */
-main {
-	padding: 50px;
-}
 
-section {
-	margin-bottom: 50px;
-}
-section h2 {
-	font-size: 2.5rem;
-	font-weight: bold;
-	margin-bottom: 20px;
-}
-section p {
-	font-size: 1.2rem;
-	margin-bottom: 20px;
-}
-label {
-	display: block;
-	margin-bottom: 10px;
-	font-weight: bold;
-}
-input[type="text"],
-input[type="email"],
-select {
-	padding: 10px;
-	margin-bottom: 20px;
-	font-size: 1.2rem;
-	border-radius: 5px;
-	border: none;
-	background-color: #fff;
-}
-input[type="text"]:focus,
-input[type="email"]:focus,
-select:focus {
-	outline: none;
-	box-shadow: 0 0 5px #fff;
-}
-button[type="submit"] {
-	padding: 10px 20px;
-	font-size: 1.2rem;
-	background-color: #f00;
-	color: #fff;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-	transition: background-color 0.2s ease;
-}
-button[type="submit"]:hover {
-	background-color: #f22;
-}
 
-/* Contact styles */
-#contact {
-	text-align: center;
-}
-#contact p {
-	font-size: 1.2rem;
-	margin-bottom: 10px;
-}
-#contact p:last-child {
-	margin-bottom: 0;
-}
 
 /* Footer styles */
 footer {
